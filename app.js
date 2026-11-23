@@ -15,52 +15,16 @@
 
   var quizBank = {
     c1: [
-      {
-        q: 'खरीफ फसल किस मौसम में बोई जाती है?',
-        options: ['बरसात के मौसम में', 'गर्मी के मौसम में', 'केवल जाड़े में'],
-        ans: 0,
-        explain: 'खरीफ फसलें बरसात के मौसम में बोई जाती हैं।',
-        followup: { q: 'आसान अभ्यास: इनमें से कौन-सी खरीफ फसल है?', options: ['धान (चावल)', 'गेहूँ', 'सरसों'], ans: 0 }
-      },
-      {
-        q: 'खेत में उगने वाले अनचाहे पौधों को क्या कहते हैं?',
-        options: ['उर्वरक', 'खरपतवार', 'सिंचाई'],
-        ans: 1,
-        explain: 'खरपतवार मुख्य फसल का पानी और पोषक तत्व छीन लेते हैं।',
-        followup: { q: 'आसान अभ्यास: खरपतवार हटाने की क्रिया क्या है?', options: ['निराई-गुड़ाई', 'भंडारण', 'कटाई'], ans: 0 }
-      }
+      { q: 'खरीफ फसल किस मौसम में बोई जाती है?', options: ['बरसात के मौसम में', 'गर्मी के मौसम में', 'केवल जाड़े में'], ans: 0, explain: 'खरीफ फसलें बरसात के मौसम में बोई जाती हैं।', followup: { q: 'आसान अभ्यास: इनमें से कौन-सी खरीफ फसल है?', options: ['धान (चावल)', 'गेहूँ', 'सरसों'], ans: 0 } },
+      { q: 'खेत में उगने वाले अनचाहे पौधों को क्या कहते हैं?', options: ['उर्वरक', 'खरपतवार', 'सिंचाई'], ans: 1, explain: 'खरपतवार मुख्य फसल का पानी और पोषक तत्व छीन लेते हैं।', followup: { q: 'आसान अभ्यास: खरपतवार हटाने की क्रिया क्या है?', options: ['निराई-गुड़ाई', 'भंडारण', 'कटाई'], ans: 0 } }
     ],
     c2: [
-      {
-        q: 'दूध से दही बनाने में कौन-सा जीवाणु मदद करता है?',
-        options: ['राइज़ोबियम', 'लैक्टोबैसिलस', 'यीस्ट'],
-        ans: 1, 
-        explain: 'लैक्टोबैसिलस जीवाणु दूध को दही में बदलता है।',
-        followup: { q: 'आसान अभ्यास: ब्रेड फुलाने में क्या काम आता है?', options: ['यीस्ट (कवक)', 'मच्छर', 'रेत'], ans: 0 }
-      },
-      {
-        q: 'दलहन की जड़ों में कौन-सा जीवाणु नाइट्रोजन स्थिरीकरण करता है?',
-        options: ['राइज़ोबियम', 'विषाणु', 'अमीबा'],
-        ans: 0,
-        explain: 'राइज़ोबियम हवा की नाइट्रोजन को मिट्टी के उपयोगी रूप में बदलता है।',
-        followup: { q: 'आसान अभ्यास: किसकी जड़ों में राइज़ोबियम होता है?', options: ['चना और मटर', 'गेहूँ', 'मक्का'], ans: 0 }
-      }
+      { q: 'दूध से दही बनाने में कौन-सा जीवाणु मदद करता है?', options: ['राइज़ोबियम', 'लैक्टोबैसिलस', 'यीस्ट'], ans: 1, explain: 'लैक्टोबैसिलस जीवाणु दूध को दही में बदलता है।', followup: { q: 'आसान अभ्यास: ब्रेड फुलाने में क्या काम आता है?', options: ['यीस्ट (कवक)', 'मच्छर', 'रेत'], ans: 0 } },
+      { q: 'दलहन की जड़ों में कौन-सा जीवाणु नाइट्रोजन स्थिरीकरण करता है?', options: ['राइज़ोबियम', 'विषाणु', 'अमीबा'], ans: 0, explain: 'राइज़ोबियम हवा की नाइट्रोजन को मिट्टी के उपयोगी रूप में बदलता है।', followup: { q: 'आसान अभ्यास: किसकी जड़ों में राइज़ोबियम होता है?', options: ['चना और मटर', 'गेहूँ', 'मक्का'], ans: 0 } }
     ],
     c3: [
-      {
-        q: 'दाब (Pressure) का सही सूत्र क्या है?',
-        options: ['बल × क्षेत्रफल', 'बल / क्षेत्रफल', 'बल + क्षेत्रफल'],
-        ans: 1,
-        explain: 'बल को क्षेत्रफल से भाग देने पर दाब मिलता है।',
-        followup: { q: 'आसान अभ्यास: नुकीली सुई से सिलाई आसान क्यों होती है?', options: ['कम क्षेत्रफल से अधिक दाब लगता है', 'सुई हल्की होती है', 'सुई गर्म होती है'], ans: 0 }
-      },
-      {
-        q: 'बल की मानक इकाई क्या होती है?',
-        options: ['पास्कल', 'न्यूटन', 'मीटर'],
-        ans: 1,
-        explain: 'बल को न्यूटन में मापा जाता है।',
-        followup: { q: 'आसान अभ्यास: धक्का देना या खींचना क्या है?', options: ['बल', 'तापमान', 'प्रकाश'], ans: 0 }
-      }
+      { q: 'दाब (Pressure) का सही सूत्र क्या है?', options: ['बल × क्षेत्रफल', 'बल / क्षेत्रफल', 'बल + क्षेत्रफल'], ans: 1, explain: 'बल को क्षेत्रफल से भाग देने पर दाब मिलता है।', followup: { q: 'आसान अभ्यास: नुकीली सुई से सिलाई आसान क्यों होती है?', options: ['कम क्षेत्रफल से अधिक दाब लगता है', 'सुई हल्की होती है', 'सुई गर्म होती है'], ans: 0 } },
+      { q: 'बल की मानक इकाई क्या होती है?', options: ['पास्कल', 'न्यूटन', 'मीटर'], ans: 1, explain: 'बल को न्यूटन में मापा जाता है।', followup: { q: 'आसान अभ्यास: धक्का देना या खींचना क्या है?', options: ['बल', 'तापमान', 'प्रकाश'], ans: 0 } }
     ]
   };
 
@@ -108,7 +72,8 @@
       var card = document.createElement('div'); card.className = 'chapter-card';
       var title = document.createElement('h3'); title.textContent = ch.title; card.appendChild(title);
       var btnRow = document.createElement('div'); btnRow.className = 'btn-row';
-      var listenBtn = document.createElement('button'); listenBtn.type = 'button'; listenBtn.className = 'btn-primary'; listenBtn.textContent = '🔊 पाठ सुनें / क्रम से पढ़ें'; btnRow.appendChild(listenBtn);
+      var listenBtn = document.createElement('button'); listenBtn.type = 'button'; listenBtn.className = 'btn-primary'; listenBtn.textContent = '🔊 पाठ सुनें'; btnRow.appendChild(listenBtn);
+      var stopBtn = document.createElement('button'); stopBtn.type = 'button'; stopBtn.className = 'btn-secondary'; stopBtn.textContent = '⏹ रोकें'; btnRow.appendChild(stopBtn);
       var saveBtn = document.createElement('button'); saveBtn.type = 'button'; saveBtn.className = 'btn-secondary'; saveBtn.textContent = isSaved ? '✅ ऑफलाइन सेव है' : '📥 ऑफलाइन सेव करें';
       saveBtn.onclick = function () {
         if (user.saved.indexOf(ch.id) === -1) user.saved.push(ch.id);
@@ -118,6 +83,10 @@
       btnRow.appendChild(saveBtn); card.appendChild(btnRow);
       var pElements = [];
       ch.paragraphs.forEach(function (text) { var p = document.createElement('p'); p.textContent = text; card.appendChild(p); pElements.push(p); });
+      stopBtn.onclick = function () {
+        if (window.speechSynthesis) window.speechSynthesis.cancel();
+        pElements.forEach(function (el) { el.classList.remove('highlight-line'); });
+      };
       listenBtn.onclick = function () {
         if (user.read.indexOf(ch.id) === -1) { user.read.push(ch.id); saveState(); }
         pElements.forEach(function (el) { el.classList.remove('highlight-line'); });
@@ -128,11 +97,11 @@
           var utter = new SpeechSynthesisUtterance(ch.title + '। ' + ch.paragraphs.join(' '));
           utter.voice = hindiVoice; utter.lang = 'hi-IN'; window.speechSynthesis.speak(utter);
         } else {
-          var idx = 0; listenBtn.textContent = '📖 क्रम से हाइलाइट चल रहा है...';
+          var idx = 0;
           var timer = setInterval(function () {
             pElements.forEach(function (el) { el.classList.remove('highlight-line'); });
-            if (idx < pElements.length) { pElements[idx].classList.add('highlight-line'); pElements[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest' }); idx++; }
-            else { clearInterval(timer); listenBtn.textContent = '🔊 पाठ सुनें / क्रम से पढ़ें'; }
+            if (idx < pElements.length) { pElements[idx].classList.add('highlight-line'); idx++; }
+            else { clearInterval(timer); }
           }, 2200);
         }
       };
@@ -163,13 +132,15 @@
     else if (q.indexOf('सूक्ष्मजीव') !== -1 || q.indexOf('दही') !== -1) showAiReply('उत्तर: सूक्ष्मजीव बहुत छोटे जीव हैं; लैक्टोबैसिलस दही जमाता है।');
     else showAiReply('आपके सवाल "' + q + '" का सरल उत्तर: समय पर सिंचाई, पोषण और स्वच्छता सबसे ज़रूरी हैं।');
   };
-
-    document.getElementById('mic-btn').onclick = function () {
+  document.getElementById('mic-btn').onclick = function () {
     var status = document.getElementById('mic-status');
     var SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SpeechRec) { status.textContent = 'इस ब्राउज़र में माइक उपलब्ध नहीं है, कृपया त्वरित बटन दबाएं।'; return; }
     var rec = new SpeechRec(); rec.lang = 'hi-IN'; status.textContent = '🎤 सुन रहा हूँ... हिंदी में बोलें';
-    rec.onresult = function (e) { var s = e.results.transcript; document.getElementById('doubt-input').value = s; status.textContent = 'आपने बोला: "' + s + '"'; document.getElementById('ask-btn').click(); };
+    rec.onresult = function (e) {
+      var s = (e.results && e.results && e.results.transcript) ? e.results.transcript : '';
+      if (s) { document.getElementById('doubt-input').value = s; status.textContent = 'आपने बोला: "' + s + '"'; document.getElementById('ask-btn').click(); }
+    };
     rec.onerror = function () { status.textContent = 'आवाज़ स्पष्ट नहीं सुनाई दी, दोबारा प्रयास करें।'; };
     rec.start();
   };
@@ -247,30 +218,5 @@
   };
 
   function renderAll() { renderProfiles(); renderChapters(); renderQuiz(); renderReport(); }
-  renderAll();
-  function addSafeStopButton() {
-    var rows = document.querySelectorAll('.chapter-card .btn-row');
-    rows.forEach(function (row) {
-      if (row.querySelector('.safe-stop-btn')) return;
-      var stopBtn = document.createElement('button');
-      stopBtn.type = 'button';
-      stopBtn.className = 'btn-secondary safe-stop-btn';
-      stopBtn.textContent = '⏹ रोकें';
-      stopBtn.onclick = function () {
-        if (window.speechSynthesis) window.speechSynthesis.cancel();
-        document.querySelectorAll('.highlight-line').forEach(function (el) {
-          el.classList.remove('highlight-line');
-        });
-      };
-      row.appendChild(stopBtn);
-    });
-  }
-
-  var oldRenderAll = renderAll;
-  renderAll = function () {
-    oldRenderAll();
-    addSafeStopButton();
-  };
-
   renderAll();
 })();
