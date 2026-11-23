@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1b4332">
+  <link rel="manifest" href="manifest.json">
+  <title>अंतिम छोर शिक्षक - कक्षा 8 विज्ञान</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>अंतिम छोर शिक्षक</h1>
+    <p class="subtitle">कक्षा 8 • विज्ञान (राजस्थान बोर्ड)</p>
+  </header>
+
+  <div id="status-bar">
+    <span id="connection-status">ऑनलाइन</span>
+  </div>
+
+  <main>
+    <!-- परिवार प्रोफाइल स्विचर -->
+    <section id="profile-section" class="card">
+      <h2>एक फोन - अनेक बच्चे</h2>
+      <div id="profile-tabs" class="btn-row"></div>
+      <form id="add-profile-form" class="inline-form">
+        <input id="new-name" type="text" maxlength="20" placeholder="केवल पहला नाम लिखें" required>
+        <button type="submit" class="btn-primary">नया बच्चा जोड़ें</button>
+      </form>
+      <p id="profile-message" class="info-msg"></p>
+      <p class="note">सुरक्षा के लिए केवल पहला नाम लिखें। फ़ोन नंबर या उम्र न लिखें।</p>
+    </section>
+
+    <!-- मुख्य नेविगेशन टैब्स -->
+    <nav class="main-nav">
+      <button type="button" class="nav-btn active" data-tab="chapters-tab">📚 पाठ और AI ट्यूटर</button>
+      <button type="button" class="nav-btn" data-tab="quiz-tab">✍️ अडैप्टिव क्विज़</button>
+      <button type="button" class="nav-btn" data-tab="report-tab">📊 अभिभावक / शिक्षक रिपोर्ट</button>
+    </nav>
+
+    <!-- टैब 1: पाठ और AI ट्यूटर -->
+    <section id="chapters-tab" class="tab-panel active">
+      <p id="summary-line" class="summary-banner"></p>
+      <div id="chapters-container"></div>
+
+      <!-- AI डाउट ट्यूटर बॉक्स -->
+      <div class="card tutor-box">
+        <h3>🤖 ऑफलाइन स्मार्ट सहायक (Offline Smart Tutor) से अपना डाउट पूछें</h3>
+        <p class="note">हिंदी टाइपिंग कठिन लगे तो बोलकर पूछें। यह सहायक इंटरनेट के बिना, पाठ की सामग्री से उत्तर देता है।</p>
+
+        <div class="inline-form"><label for="tutor-chapter-select"><strong>अध्याय चुनें:</strong></label>
+          <select id="tutor-chapter-select" class="select-box">
+            <option value="c1">अध्याय 1: फसल उत्पादन एवं प्रबंध</option>
+            <option value="c2">अध्याय 2: सूक्ष्मजीव: मित्र एवं शत्रु</option>
+            <option value="c3">अध्याय 3: बल तथा दाब</option>
+          </select>
+        </div>
+
+        <div class="btn-row">
+          <button type="button" class="btn-secondary quick-doubt" data-type="easy">इसे और आसान भाषा में समझाएं</button>
+          <button type="button" class="btn-secondary quick-doubt" data-type="example">घर या खेत का उदाहरण दें</button>
+          <button type="button" class="btn-secondary quick-doubt" data-type="points">परीक्षा के मुख्य बिंदु</button>
+        </div>
+
+        <div class="input-tools">
+          <button type="button" id="mic-btn" class="btn-voice">🎤 बोलकर पूछें</button>
+          <label class="btn-photo">
+            📷 फोटो चुनें
+            <input type="file" id="photo-input" accept="image/*" hidden>
+          </label>
+        </div>
+        <p id="mic-status" class="note"></p>
+        <div id="photo-preview-box" class="photo-box hidden"></div>
+
+        <div class="inline-form">
+          <input type="text" id="doubt-input" placeholder="यहाँ अपना सवाल लिखें (जैसे: दाब क्या है?)">
+          <button type="button" id="ask-btn" class="btn-primary">पूछें</button>
+        </div>
+
+        <div id="ai-reply-box" class="reply-box hidden"></div>
+      </div>
+    </section>
+
+    <!-- टैब 2: अडैप्टिव अभ्यास क्विज़ -->
+    <section id="quiz-tab" class="tab-panel">
+      <div class="card">
+        <h2>✍️ अडैप्टिव अभ्यास क्विज़</h2>
+        <p class="note">गलत जवाब देने पर ऐप आपको कारण समझाएगा और उसी विषय का एक आसान सवाल पूछेगा।</p>
+        <label for="quiz-chapter-select"><strong>अध्याय चुनें:</strong></label>
+        <select id="quiz-chapter-select" class="select-box">
+          <option value="c1">अध्याय 1: फसल उत्पादन एवं प्रबंध</option>
+          <option value="c2">अध्याय 2: सूक्ष्मजीव: मित्र एवं शत्रु</option>
+          <option value="c3">अध्याय 3: बल तथा दाब</option>
+        </select>
+        <div id="quiz-area"></div>
+      </div>
+    </section>
+
+    <!-- टैब 3: अभिभावक / शिक्षक रिपोर्ट -->
+    <section id="report-tab" class="tab-panel">
+      <div class="card">
+        <h2>📊 अभिभावक एवं शिक्षक प्रगति रिपोर्ट</h2>
+        <div id="report-content" class="report-card"></div>
+        <button type="button" id="copy-report-btn" class="btn-primary">📋 रिपोर्ट कॉपी करें (शिक्षक/अभिभावक हेतु)</button>
+        <p id="copy-status" class="info-msg"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>सरकारी स्कूलों, NGO एवं CSR शिक्षा पहल के अंतर्गत सभी विद्यार्थियों के लिए पूर्णतः निःशुल्क।</p>
+  </footer>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
